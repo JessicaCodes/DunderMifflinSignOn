@@ -15,6 +15,21 @@
 */
 
 // Create an employee class
+class Employee {
+    constructor(name, id, signedIn){
+        this.name = name
+        this.id = id
+        this.signIn = false
+    }
+
+    welcome(){
+        this.id.
+    } 
+
+    id(){
+        employye.sign.In = True;
+    }
+}
 // Create a signed-in object (could be from a class)
 
 /* 
@@ -28,10 +43,13 @@
 */
 
 const inputName = document.body.querySelector("#name-div input");
+const id = document.body.querySelector("#id-div input")
 const nameSubmit = document.body.querySelector("#sign-in-form button");
+const signedIn = document.body.querySelector("#signed-in div");
 
 nameSubmit.addEventListener("click", handleClick);
 
 function handleClick(){
-    console.log(inputName.value);
+    inputName.innerHTML = this.name;
+   
 }
