@@ -48,7 +48,6 @@ class Employee {
     empName:"",
     id:"",
     signIn: false,
-
 }
 
 const inputName = document.body.querySelector("#name-div input");
