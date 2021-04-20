@@ -16,22 +16,25 @@
 
 // Create an employee class
 
-
 class Employee {
-    constructor(name, id, signIn){
+    constructor(name, id){
         this.name = name
         this.id = id
         this.signIn = false
+        this.signInTime= new Date(Date.now()) 
     }
-
+    
     welcome(){
-       return `Welcome ${this.name}!`      
+        return `Welcome ${this.name} ${this.id} ${this.signInTime.toString()}<br/>`      
     } 
-
+    
     id(){
         employye.sign.In = True;
     }
 }
+
+//let employeeOne=new Employee("Ana",245356)
+//console.log(employeeOne)
 
 // const user1 = new employee(inputName)
 
@@ -67,9 +70,9 @@ const signedIn = document.body.querySelector("#signed-in div");
 nameSubmit.addEventListener("click", handleClick);
 
 function handleClick(){
-    inputName.innerHTML = this.name
-    welcome();
-    signedIn.innerHTML = this.name, this.id, this.signedIn
+    const employee=  new Employee(inputName.value,id.value)
+    console.log(employee)
+    signedIn.innerHTML +=employee.welcome()
 }
 
 function updateSignIn(){
